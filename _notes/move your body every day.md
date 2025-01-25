@@ -1,7 +1,7 @@
 ---
 ---
 
-Move your body every day. Benefits include:
+Move your body every day. Benefits include: [[Communism]]
 
 - Improved sleep quality
 - Less risk of chronic disease

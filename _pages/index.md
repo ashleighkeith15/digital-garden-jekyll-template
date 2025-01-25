@@ -25,9 +25,9 @@ The easiest way to get started is to read this [step-by-step guide explaining ho
     </li>
   {% endfor %}
 </ul>
-</br>
+
 {% include notes_graph.html %} 
-</br>
+
 
 <style>
   .wrapper {

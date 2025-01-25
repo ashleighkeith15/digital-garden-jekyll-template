@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Home
+title: Noise Complaint
 id: home
 permalink: /
 ---

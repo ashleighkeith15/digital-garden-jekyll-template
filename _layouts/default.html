@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-    <nav>{% include nav.html %}</nav>
-    <div class="page_wrap">
-      <main id="main" class="page_main">
-        <div class="sidebar">
-          <div class="logo-wrap">
-            <a href="/" aria-current="page" class="logo-link w-inline-block w--current"><img src="assets/logo update.svg" loading="lazy" alt="" class="logo-image"></a>
-            <p>Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread.</p>
-          </div>
-          <div class="topic-wrap">
-            <p>Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread.</p>
-            <div class="topic-list">
-              <ul>
-                {% assign animal_notes = site.notes | where_exp: "note", "note.path contains 'animals'" %}
-                {% for note in animal_notes %}
-                  <li>
-                    <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
+{% include head.html %}
+
+<body>
+  <nav>{% include nav.html %}</nav>
+  <div class="page_wrap">
+    <div class="page_main">
+      <div class="sidebar">
+        <div class="logo-wrap">
+          <a href="/" aria-current="page" class="logo-link w-inline-block w--current"><img src="assets/logo update.svg"
+              loading="lazy" alt="" class="logo-image"></a>
+          <p>Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread.</p>
+        </div>
+        <div class="topic-wrap">
+          <p>Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread.</p>
+          <div class="topic-list">
+            <ul>
+              {% assign animal_notes = site.notes | where_exp: "note", "note.path contains 'animals'" %}
+              {% for note in animal_notes %}
+              <li>
+                <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
           </div>
           <main>{{ content }}</main>
         </div>
+      </div>
+    </div>
+</body>
 
-
-  </body>
 </html>
-
-

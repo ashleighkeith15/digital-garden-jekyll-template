@@ -223,7 +223,7 @@ code {
 
 .topic-ul {
   ul {
-    padding-inline-start: 0px;
+    padding-inline-start: 0px !important;
   }
 }
 
@@ -247,8 +247,8 @@ code {
 }
 
 .topic-item {
-  grid-column-gap: 1em;
-    grid-row-gap: 1em;
+  grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
     display: flex;
 }
 
@@ -256,7 +256,7 @@ code {
 .topic-item:hover{
 .indicator {
   display:block;
-  transition: background 300ms;
+  transition: ease-in 300ms;
   background: red;
 }
 }
@@ -276,7 +276,6 @@ code {
   width: auto;
   padding: .2rem;
   display: inline-flex;
-  color: black;
 }
 
 .button:hover {

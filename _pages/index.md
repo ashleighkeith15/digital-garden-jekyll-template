@@ -26,6 +26,17 @@ The easiest way to get started is to read this [step-by-step guide explaining ho
   {% endfor %}
 </ul>
 
+<strong>Folders</strong>
+
+<ul>
+  {% assign folders = site.notes | group_by_exp: "note", "note.path | split: '/' | reverse | drop: 1 | last" | sort: "name" %}
+  {% for folder in folders %}
+    <li>
+      <a class="internal-link" href="{{ site.baseurl }}/{{ folder.name }}">{{ folder.name }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
 {% include notes_graph.html %} 
 
 

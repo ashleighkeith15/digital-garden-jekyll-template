@@ -91,6 +91,7 @@ footer {
   color: mix($color-text, white, 80%);
   padding-top: 1em;
 background-color: #f7f4ee;
+z-index: 3;
 
 }
 
@@ -143,30 +144,6 @@ h6 {
   padding-bottom: 0;
 }
 
-a {
-  transition: background 300ms;
-  padding: 0 0.1em;
-  text-decoration: none;
-  border-bottom: 1px solid $color-border;
-  color: $color-primary;
-  background-color: transparent;
-  &:hover {
-    color: black !important;
-    background: red;
-  }
-  &:after {
-    position: relative;
-    top: -0.5em;
-    font-size: 0.7em;
-    content: "↗";
-    color: #aaaaaa;
-  }
-  &.internal-link:after,
-  &.footnote:after,
-  &.reversefootnote:after {
-    content: "";
-  }
-}
 
 *:focus {
   background: #ffe8bc !important;
@@ -237,7 +214,6 @@ code {
 }
 
 .indicator {
-  background-color: red;
   align-self: center;
   width: 1.75rem;
   height: .25rem;
@@ -277,6 +253,13 @@ code {
   width: auto;
   padding: .2rem;
   display: inline-flex;
+}
+
+.button:hover {
+  transition: background 300ms;
+  color: black !important;
+  background: red;
+
 }
 
 .path-5f451 {
@@ -385,4 +368,5 @@ code {
   position: relative;
   padding-left: 9rem;
   height: 100%;
+  padding-top: 3rem;
 }

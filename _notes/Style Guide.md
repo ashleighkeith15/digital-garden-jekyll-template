@@ -5,11 +5,14 @@ title: Style Guide
 
 # Style Guide
 
-## Heading One
-### Heading Two
+# Heading One
+## Heading Two
 ### Heading Three
 #### Heading Four
 ##### Heading Five
+
+**Bold body**
+*Italic Body*
 
 Icing chocolate bar cotton candy gummi bears brownie marzipan. Carrot cake jelly beans tiramisu chocolate bar cupcake dragée. Caramels apple pie gummi bears macaroon topping cake ice cream cotton candy.
 Candy canes shortbread soufflé jelly-o sweet cotton candy. Cookie tart sugar plum macaroon gummi bears. Sugar plum pastry donut cake sweet chocolate bar pudding. Marzipan gummies caramels pastry chocolate pie pudding cake.

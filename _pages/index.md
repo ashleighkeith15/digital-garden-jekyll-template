@@ -29,10 +29,10 @@ The easiest way to get started is to read this [step-by-step guide explaining ho
 <strong>MOCs</strong>
 
 <ul>
-  {% assign animal_notes = site.notes | where_exp: "note", "note.path contains '/_notes/animals/'" %}
+  {% assign animal_notes = site.notes | where_exp: "note", "note.path contains 'animals'" %}
   {% for note in animal_notes %}
     <li>
-      <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title | default: note.path | split: '/' | last | remove: '.md' }}</a>
+      <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
     </li>
   {% endfor %}
 </ul>

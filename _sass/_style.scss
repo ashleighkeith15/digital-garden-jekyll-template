@@ -217,15 +217,16 @@ code {
   border-right: 1px solid red;
   width: 30%;
   height: 100%;
+  position: fixed;
 }
 
 .content {
   flex: 1;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 9rem;
   display: flex;
   position: relative;
+  width: 70%;
 }
 
 .logo-wrap {
@@ -371,7 +372,10 @@ code {
 }
 
 .page_main {
-  display: flex;
+
   flex-direction: row;
-  height: 100vh;
+
+justify-content: flex-end;
+    align-items: flex-start;
+    display: flex;
 }

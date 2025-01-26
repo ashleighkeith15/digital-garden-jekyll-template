@@ -26,13 +26,13 @@ The easiest way to get started is to read this [step-by-step guide explaining ho
   {% endfor %}
 </ul>
 
-<strong>Folders</strong>
+<strong>MOCs</strong>
 
 <ul>
-  {% assign folders = site.notes | group_by_exp: "note", "note.path | split: '/' | reverse | drop: 1 | last" | sort: "name" %}
-  {% for folder in folders %}
+  {% assign animal_notes = site.notes | where_exp: "note", "note.path contains '/_notes/animals/'" %}
+  {% for note in animal_notes %}
     <li>
-      <a class="internal-link" href="{{ site.baseurl }}/{{ folder.name }}">{{ folder.name }}</a>
+      <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title | default: note.path | split: '/' | last | remove: '.md' }}</a>
     </li>
   {% endfor %}
 </ul>

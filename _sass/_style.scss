@@ -86,10 +86,8 @@ time {
 }
 
 footer {
-  margin: 2em 0;
   font-size: 0.8em;
   color: mix($color-text, white, 80%);
-  padding-top: 1em;
 background-color: #f7f4ee;
 z-index: 3;
 
@@ -219,6 +217,14 @@ code {
   align-self: center;
   width: 1.75rem;
   height: .25rem;
+
+  display: none;
+}
+
+.topic-ul {
+  ul {
+    padding-inline-start: 0px;
+  }
 }
 
 .topic-list {
@@ -246,13 +252,22 @@ code {
     display: flex;
 }
 
+
+.topic-item:hover{
+.indicator {
+  display:block;
+  transition: background 300ms;
+  background: red;
+}
+}
+
 .blockquote {
   border-left: 2px dashed red;
   background-color: #fff;
   padding-left: .62rem;
 }
 
-.button {
+.button  {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
   border: 1px solid #000;
@@ -261,13 +276,18 @@ code {
   width: auto;
   padding: .2rem;
   display: inline-flex;
+  color: black;
 }
 
 .button:hover {
   transition: background 300ms;
-  color: black !important;
+  color: white !important;
   background: red;
 
+}
+
+.button a {
+  color: inherit;
 }
 
 .path-5f451 {
@@ -280,6 +300,7 @@ code {
 
 .button-label {
   line-height: 1;
+  display: inline-block;
 }
 
 

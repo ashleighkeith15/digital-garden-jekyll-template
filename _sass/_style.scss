@@ -30,6 +30,12 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     src: url('assets/Satoshi-Bold.woff2') format('woff2');
     font-display:swap;
   }
+
+  @font-face {
+    font-family: 'Satoshi Bold Italic';
+    src: url('assets/Satoshi-BoldItalic.woff2') format('woff2');
+    font-display:swap;
+  }
   
 
 body {
@@ -46,12 +52,14 @@ body {
 
   em {
     font-family: 'Satoshi Italic';
-    color: orange;
   }
 
   strong {
     font-family: 'Satoshi Bold';
-    color: red;
+  }
+
+  em strong {
+    font-family: 'Satoshi Bold Italic';
   }
 
   @media (min-width: 820px) {
@@ -127,9 +135,10 @@ a {
   text-decoration: none;
   border-bottom: 1px solid $color-border;
   color: $color-primary;
+  background-color: transparent;
   &:hover {
     color: black !important;
-    background: #fffaf1;
+    background: red;
   }
   &:after {
     position: relative;

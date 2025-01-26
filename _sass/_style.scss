@@ -213,6 +213,8 @@ code {
   font-size: 1.25rem;
 }
 
+
+
 .indicator {
   align-self: center;
   width: 1.75rem;
@@ -236,6 +238,12 @@ code {
   align-items: center;
   width: 100%;
   display: flex;
+}
+
+.topic-item {
+  grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    display: flex;
 }
 
 .blockquote {

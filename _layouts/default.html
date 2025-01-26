@@ -16,7 +16,14 @@
         </div>
         <div class="topic-wrap">
           <div class="topic-list">
-
+            <ul>
+              {% assign animal_notes = site.notes | where_exp: "note", "note.path contains 'animals'" %}
+              {% for note in animal_notes %}
+                <li>
+                  <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
           </div>
         </div>
       </div>

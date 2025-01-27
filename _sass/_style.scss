@@ -94,7 +94,10 @@ body {
 time {
   display: block;
   color: $color-subtext;
-  margin: 0.5em 0 1em;
+  margin: 0;
+  padding: 2px 5px;
+    font-size: 0.8rem;
+
 }
 
 
@@ -129,7 +132,7 @@ hr {
   background: $color-border;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Redaction Regular';
 }
 
@@ -137,6 +140,12 @@ h1 em, h2 em {
   font-family: 'Redaction Italic';
 }
 
+
+h4, h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-family: 'Satoshi Bold';
+}
 
 
 h1,
@@ -150,6 +159,11 @@ h6 {
   padding-bottom: 0;
 }
 
+
+.internal-link {
+  color: red;
+  font-family: 'Satoshi Bold';
+}
 
 *:focus {
   background: #ffe8bc !important;
@@ -171,7 +185,7 @@ h6 {
 }
 
 .backlink-box {
-  background: $color-box-background;
+  background: white;
   padding: 1em;
   border-radius: $border-radius;
 }
@@ -492,11 +506,7 @@ z-index: 5;
   margin-top: 1em;
 }
 
-time {
-  margin: 0;
-  padding: 2px 5px;
-    font-size: 0.8rem;
-}
+
 
 .note-title h1 {
   font-size: 3rem;

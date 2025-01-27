@@ -1,5 +1,6 @@
 ---
 title: Womanism 101 Curriculum
+excerpt: This curriculum traces the development of womanism and Black feminism, examining their origins, theoretical frameworks, key figures, and ongoing impact on social movements and feminist thought. 
 ---
 
 link test 

@@ -89,7 +89,7 @@ footer {
   font-size: 0.8em;
   color: mix($color-text, white, 80%);
 background-color: #f7f4ee;
-z-index: 3;
+z-index: 5;
 
 }
 
@@ -445,7 +445,7 @@ code {
 }
 
 .thank-you {
-  font-family: 'Redaction Italc';
+  font-family: 'Redaction Italic';
   color: #ff6ec9;
   text-align: center;
   white-space: nowrap;
@@ -453,4 +453,8 @@ code {
   line-height: 1;
   position: absolute;
   inset: auto 0% 0%;
+}
+
+.note-wrap {
+  background-color: orange;
 }

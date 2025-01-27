@@ -11,8 +11,8 @@
       <div class="topic-list">
         
         <ul>
-          {% assign animal_notes = site.notes | where_exp: "note", "note.path contains 'animals'" %}
-          {% for note in animal_notes %}
+          {% assign topics_notes = site.notes | where_exp: "note", "note.path contains 'topics'" %}
+          {% for note in topics_notes %}
             <li class="topic-item">
               <div class="indicator"></div>
               <h2 class="topics">

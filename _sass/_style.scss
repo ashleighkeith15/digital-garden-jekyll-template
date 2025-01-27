@@ -111,10 +111,9 @@ blockquote {
   margin: 0;
   font-size: 0.88em;
   background: white;
-  border-radius: $border-radius;
-  border-left: 2px dashed var(--swatch--primary);
+  border-left: 2px dashed red;
   background-color: #fff;
-  padding-left: .62rem;
+  padding: 0.3125rem 0.625rem;
 
   p {
     margin: 0;
@@ -481,15 +480,17 @@ z-index: 5;
 
 
 .nodes circle {
-  cursor: pointer;
-  fill: red;
-  transition: all 0.15s ease-out;
+  fill: red !important;
 }
 
 .modified-time {
-  background-color: red;
+  border-radius: 0.5rem;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  font-family: 'Satoshi Bold';
+  width: fit-content;
 }
 
 .note-title h1 {
-  font-size: 6rem;
+  font-size: 3rem;
 }

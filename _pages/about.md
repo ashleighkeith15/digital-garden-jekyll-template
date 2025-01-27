@@ -12,8 +12,27 @@ Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread. Biscui
               </a>
 
 
-<style> 
-.button {
+
+<style>
+    .button {
     border: 1px solid white;
 }
+  body {
+    padding: 0px !important;
+    color: white !important;
+  }
+
+  .sidebar {
+    border-right: 0px;
+  }
+
+  .logo-wrap {
+    p {
+      display: none;
+    }
+  }
+
+  .topic-list {
+    display: none;
+  }
 </style>

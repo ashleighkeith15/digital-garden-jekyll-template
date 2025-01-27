@@ -342,6 +342,12 @@ height: 5.8125rem;
   display: inline-block;
 }
 
+.button-image img {
+  margin: 0px;
+  display: auto;
+border-radius: 0px;
+}
+
 
 .footer {
   position: fixed;

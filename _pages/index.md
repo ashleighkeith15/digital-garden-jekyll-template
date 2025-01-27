@@ -13,7 +13,7 @@ permalink: /
   <p>Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread. Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread.Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread.</p>
 </div>
 <div class="button">
-<a href="/about">
+<a href="/about" target="_self">
   <div class="button-label">About</div><img src="assets/arrow.svg" loading="lazy" alt="" class="button-image"></a></div>
  
 

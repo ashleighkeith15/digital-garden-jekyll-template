@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: recent
 title: Recent notes
 ---
 

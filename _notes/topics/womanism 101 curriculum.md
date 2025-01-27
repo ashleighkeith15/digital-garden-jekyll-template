@@ -3,9 +3,12 @@ title: Womanism 101 Curriculum
 excerpt: This curriculum traces the development of womanism and Black feminism, examining their origins, theoretical frameworks, key figures, and ongoing impact on social movements and feminist thought. 
 ---
 
-link test 
+footnote test
+Here's my main text with a footnote[^1] and another footnote[^2].
 
-[[Communism]]
+[^1]: This is the first footnote content
+[^2]: This is the second footnote with multiple lines.
+   Indent subsequent lines to include them in the footnote.
 
 ## Table of Contents
 - Course Overview (#course-overview)

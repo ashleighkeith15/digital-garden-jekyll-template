@@ -1,6 +1,6 @@
 ---
-"Created On:": September 17th, 2023
-"Updated On:": July 14th, 2024
+title: Communism
+date: 2025-01-26
 ---
 As defined by [[Karl Marx]] in the [[Communist Manifesto]], the main goal of the Communist party is to represent the wants and common interests of the entire proletariat, independent of all nationality. 
 

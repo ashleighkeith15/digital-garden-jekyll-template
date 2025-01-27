@@ -1,6 +1,7 @@
 ---
 type: Note
 title: Style Guide
+date: 2025-01-26
 ---
 
 # Style Guide

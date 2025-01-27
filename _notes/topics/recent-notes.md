@@ -4,8 +4,9 @@ title: Recent notes
 
 Cheesecake biscuit toffee carrot cake jelly cookie. Toffee danish gummi bears cheesecake chupa chups cookie chocolate cake macaroon cookie. Gummi bears marzipan cotton candy pudding jelly-o soufflé chocolate bar cake.
 
+
 <div class="recent-notes">
- {% assign recent_notes = site.notes | sort: "date" | reverse | limit: 5 %}
+ {% assign recent_notes = site.notes | where_exp: "note", "note.title != 'Recent Notes'" | sort: "date" | reverse | limit: 10 %}
  {% for note in recent_notes %}
    <div class="recent-note-preview">
      <h3 class="recent-note-title">

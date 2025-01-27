@@ -546,15 +546,15 @@ z-index: 5;
   justify-content: center;
   column-gap: 1em;
 }
-.recent-note-preview {
-  background-color: yellow;
-}
+
 .recent-note-title {
-color: red;
+font-family: 'Redaction Regular'
 }
 
-.recent-note-excerpt {
-  color: green;
+.recent-note-preview:not(:first-child) {
+padding: 1.5em 0em;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
 }
 
 @media screen and (max-width: 991px) {

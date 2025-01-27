@@ -504,6 +504,10 @@ z-index: 5;
   inset: auto 0% 0%;
 }
 
+#graph-wrapper {
+  background-color: transparent;
+}
+
 
 .nodes circle {
   fill: red !important;
@@ -523,3 +527,147 @@ z-index: 5;
 .note-title h1 {
   font-size: 3rem;
 }
+
+
+@media screen and (max-width: 991px) {
+  body {
+
+  }
+
+ h1 {
+    font-size: 3rem;
+  }
+
+
+
+
+  .content {
+    padding-left: 5rem;
+  }
+
+  .logo-wrap {
+    padding: 1.9rem;
+  }
+
+  .content-body {
+    width: 80%;
+  }
+
+  .scattered-image {
+    max-width: 7rem;
+  }
+
+  .scattered-image.is-2 {
+    top: 6%;
+  }
+
+  .scattered-image.is-3 {
+    top: 67%;
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+
+  .about-content-wrap {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    --_responsive---padding-vertical: 7rem;
+    --_responsive---padding-horizontal: 3rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+
+  .page_main {
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    flex-flow: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: auto;
+    height: auto;
+    position: static;
+  }
+
+  .content {
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    flex-flow: column;
+    width: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .logo-wrap {
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .logo-link.w--current {
+    margin-bottom: 0;
+  }
+
+  .indicator {
+    display: none;
+  }
+
+  .topic-list {
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topic, .content-body {
+    width: auto;
+  }
+
+  .scattered-wrap {
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    display: flex;
+    position: static;
+  }
+
+  .scattered-image.is-1, .scattered-image.is-2, .scattered-image.is-3, .scattered-image.is-4 {
+    position: static;
+  }
+
+  .topic-ul {
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .page_main {
+    flex-flow: column;
+  }
+
+
+  .content {
+    width: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .logo-wrap {
+    flex-flow: column;
+  }
+}
+
+

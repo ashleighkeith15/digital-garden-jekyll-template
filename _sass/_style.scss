@@ -546,7 +546,16 @@ z-index: 5;
   justify-content: center;
   column-gap: 1em;
 }
+.recent-note-preview {
+  background-color: yellow;
+}
+.recent-note-title {
+color: red;
+}
 
+.recent-note-excerpt {
+  color: green;
+}
 
 @media screen and (max-width: 991px) {
 

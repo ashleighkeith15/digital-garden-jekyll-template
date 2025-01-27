@@ -25,7 +25,20 @@
         
         <ul>
           {% assign topics_notes = site.notes | where_exp: "note", "note.path contains 'topics'" %}
-          {% for note in topics_notes %}
+          {% assign sorted_notes = topics_notes | sort: "title" %}
+          {% assign recent_note = sorted_notes | where: "title", "Recent Notes" | first %}
+          {% assign other_notes = sorted_notes | where_exp: "note", "note.title != 'Recent Notes'" %}
+          
+          {% if recent_note %}
+            <li class="topic-item">
+              <div class="indicator"></div>
+              <h2 class="topics">
+                <a class="internal-link" href="{{ site.baseurl }}{{ recent_note.url }}">{{ recent_note.title }}</a>
+              </h2>
+            </li>
+          {% endif %}
+          
+          {% for note in other_notes %}
             <li class="topic-item">
               <div class="indicator"></div>
               <h2 class="topics">
@@ -33,7 +46,7 @@
               </h2>
             </li>
           {% endfor %}
-        </ul>
+         </ul>
       </div>
     </div>
   </div>

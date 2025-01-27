@@ -513,6 +513,11 @@ z-index: 5;
   fill: red !important;
 }
 
+.links line {
+  stroke: black !important;
+  opacity: 1;
+}
+
 .modified-time {
   border-radius: 0.5rem;
   border: 1px solid #000;

@@ -108,16 +108,19 @@ img {
 }
 
 blockquote {
-  padding: 1.5em;
   margin: 0;
   font-size: 0.88em;
-  background: $color-box-background;
+  background: white;
   border-radius: $border-radius;
+  border-left: 2px dashed var(--swatch--primary);
+  background-color: #fff;
+  padding-left: .62rem;
 
   p {
     margin: 0;
   }
 }
+
 
 hr {
   width: 100%;
@@ -131,12 +134,12 @@ h1, h2 {
   font-family: 'Redaction Regular';
 }
 
-
-.note-title {
-  h1 {
-    color: red;
-  }
+h1 em, h2 em {
+  font-family: 'Redaction Italic';
 }
+
+
+
 h1,
 h2,
 h3,
@@ -464,6 +467,17 @@ z-index: 5;
   inset: auto 0% 0%;
 }
 
-.note-wrap {
-  background-color: orange;
+
+.nodes circle {
+  cursor: pointer;
+  fill: red;
+  transition: all 0.15s ease-out;
+}
+
+.modified-time {
+  background-color: red;
+}
+
+.note-title h1 {
+  font-size: 6rem;
 }

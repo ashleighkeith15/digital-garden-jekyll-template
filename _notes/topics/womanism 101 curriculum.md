@@ -4,7 +4,7 @@ date: 2025-01-26
 excerpt: This curriculum traces the development of womanism and Black feminism, examining their origins, theoretical frameworks, key figures, and ongoing impact on social movements and feminist thought. 
 ---
 
-<a href="/communism">Communism</a>
+<a href="/communism" class="internal-link">Communism</a>
 
 Here's my main text with a footnote[^1] and another footnote[^2].
 

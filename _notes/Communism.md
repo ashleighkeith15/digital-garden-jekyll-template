@@ -2,6 +2,9 @@
 title: Communism
 date: 2025-01-26
 ---
+
+link to afro pessimism [[Afro-Pessimism]]
+
 As defined by [[Karl Marx]] in the [[Communist Manifesto]], the main goal of the Communist party is to represent the wants and common interests of the entire proletariat, independent of all nationality. 
 
 The communist party is the most advanced and resolute section of the working class parties of every country. They clearly see the finish line - keeping at heart the goals of the proletarian movement. 

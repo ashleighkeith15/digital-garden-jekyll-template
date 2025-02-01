@@ -1,52 +1,64 @@
 <div class="sidebar">
-    <div class="logo-wrap">
-      <a href="/" aria-current="page" class="logo-link w-inline-block w--current"><img src="assets/logo update.svg"
-          loading="lazy" alt="" class="logo-image"></a>
-      <p>Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread.</p>
-      </div>
-<div class="button-wrap">
-          <div class="button home">
-            <a href="/"><div class="button-label">Home</div></a>
-              <img src="assets/arrow.svg" loading="lazy" alt="" class="button-image">
-            </div>
-          <div class="button about">
-            <a href="/about"><div class="button-label">About</div></a>
-              <img src="assets/arrow.svg" loading="lazy" alt="" class="button-image">
-            </div>
-          <div class="button substack">
-            <a href="https://noisecomplaint.substack.com/?utm_source=substack&utm_medium=web&utm_campaign=profile_page"><div class="button-label">Substack</div></a>
-              <img src="assets/arrow.svg" loading="lazy" alt="" class="button-image">
-            </div>
-        </div>
-
-
-    <div class="topic-wrap">
-      <div class="topic-list">
-        
-        <ul>
-          {% assign topics_notes = site.notes | where_exp: "note", "note.path contains 'topics'" %}
-          {% assign sorted_notes = topics_notes | sort: "title" %}
-          {% assign recent_note = sorted_notes | where: "title", "Recent Notes" | first %}
-          {% assign other_notes = sorted_notes | where_exp: "note", "note.title != 'Recent Notes'" %}
-          
-          {% if recent_note %}
-            <li class="topic-item">
-              <div class="indicator"></div>
-              <h2 class="topics">
-                <a class="internal-link" href="{{ site.baseurl }}{{ recent_note.url }}">{{ recent_note.title }}</a>
-              </h2>
-            </li>
-          {% endif %}
-          
-          {% for note in other_notes %}
-            <li class="topic-item">
-              <div class="indicator"></div>
-              <h2 class="topics">
-                <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
-              </h2>
-            </li>
-          {% endfor %}
-         </ul>
-      </div>
+  <div class="logo-wrap">
+    <a href="/" aria-current="page" class="logo-link w-inline-block w--current"><img src="assets/logo update.svg"
+        loading="lazy" alt="" class="logo-image"></a>
+    <p>Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread.</p>
+  </div>
+  <div class="button-wrap">
+    <div class="button home">
+      <a href="/">
+        <div class="button-label">Home</div>
+      </a>
+      <img src="assets/arrow.svg" loading="lazy" alt="" class="button-image">
+    </div>
+    <div class="button about">
+      <a href="/about">
+        <div class="button-label">About</div>
+      </a>
+      <img src="assets/arrow.svg" loading="lazy" alt="" class="button-image">
+    </div>
+    <div class="button substack">
+      <a href="https://noisecomplaint.substack.com/?utm_source=substack&utm_medium=web&utm_campaign=profile_page">
+        <div class="button-label">Substack</div>
+      </a>
+      <img src="assets/arrow.svg" loading="lazy" alt="" class="button-image">
+    </div>
+    <div class="button substack">
+      <a href="/articles">
+        <div class="button-label">Substack</div>
+      </a>
+      <img src="assets/arrow.svg" loading="lazy" alt="" class="button-image">
     </div>
   </div>
+
+
+  <div class="topic-wrap">
+    <div class="topic-list">
+
+      <ul>
+        {% assign topics_notes = site.notes | where_exp: "note", "note.path contains 'topics'" %}
+        {% assign sorted_notes = topics_notes | sort: "title" %}
+        {% assign recent_note = sorted_notes | where: "title", "Recent Notes" | first %}
+        {% assign other_notes = sorted_notes | where_exp: "note", "note.title != 'Recent Notes'" %}
+
+        {% if recent_note %}
+        <li class="topic-item">
+          <div class="indicator"></div>
+          <h2 class="topics">
+            <a class="internal-link" href="{{ site.baseurl }}{{ recent_note.url }}">{{ recent_note.title }}</a>
+          </h2>
+        </li>
+        {% endif %}
+
+        {% for note in other_notes %}
+        <li class="topic-item">
+          <div class="indicator"></div>
+          <h2 class="topics">
+            <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+          </h2>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

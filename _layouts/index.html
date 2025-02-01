@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
+---
+layout: default
+---
 
-<body>
 
-  <div class="page_wrap">
-    <main id="main" class="page_main">
-      <div class="nav">
-        <nav>{% include nav.html %}</nav>
-      </div>
       <div class="content">
         <div class="home_wrap">
           <div class="home-title-wrap">
@@ -47,38 +41,5 @@
           </div>
         {% endfor %}
        </div>
-    </main>
-    <div class="footer">
-      {% include footer.html %}
-    </div>
-  </div>
 
 
-
-
-</body>
-
-<style>
-  .content {
-    height: 100vh;
-  }
-
-
-  body {
-    padding: 0px;
-  }
-
-
-  @media screen and (max-width: 767px) {
-    .content {
-      height: auto;
-      width: auto;
-    }
-
-    .content-body {
-      width: 100%;
-    }
-  }
-</style>
-
-</html>

@@ -404,8 +404,9 @@ z-index: 5;
 
 .page_main {
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: stretch;
   display: flex;
+  flex-direction: column;
 }
 
 
@@ -625,3 +626,40 @@ border-bottom: 1px solid #ccc;
   padding-right: 3em;
 }
 
+.note-wrap {
+  grid-column-gap: 5rem;
+  grid-row-gap: 5rem;
+  padding-left: 3rem;
+  display: flex;
+  position: relative;
+}
+
+.note-mentions {
+  border-left: 1px solid #000;
+  width: 20%;
+}
+
+.note-content-wrap {
+  flex: 1;
+  padding-top: 8rem;
+}
+
+.mentioned-contain {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: scroll;
+}
+
+.mention-title {
+  background-color: var(--swatch--primary);
+  color: var(--swatch--white);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 7px;
+}
+
+.mentioned-item {
+  border-bottom: 1px solid #000;
+  padding: 13px;
+}

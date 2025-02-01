@@ -3,28 +3,19 @@
 {% include head.html %}
 
 <body>
-  <nav>{% include nav.html %}</nav>
-
-
   <div class="page_wrap">
     <main id="main" class="page_main">
-      <div class="sidebar">
-        {% include sidebar.html %}
-      </div>
-      <div class="content">
-        <div class="content-body">
-          <main>{{ content }}</main>
-        </div>
-        
-      </div>
-    </main>
+  <nav>{% include nav.html %}</nav>
 
-  </div>
-
+  <content>
+    {{ content }}
+  
+  </content>
 
   <footer>{% include footer.html %}</footer>
 
-
+</main>
+</div>
 </body>
 
 </html>

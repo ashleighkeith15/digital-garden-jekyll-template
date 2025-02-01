@@ -3,66 +3,82 @@
 {% include head.html %}
 
 <body>
-  <nav>{% include nav.html %}</nav>
-
 
   <div class="page_wrap">
     <main id="main" class="page_main">
-      <div class="sidebar">
-        {% include sidebar.html %}
+      <div class="nav">
+        <nav>{% include nav.html %}</nav>
       </div>
       <div class="content">
-        <div class="content-body">
-          <main>{{ content }}</main>
+        <div class="home_wrap">
+          <div class="home-title-wrap">
+            <h1>A blog about something.</h1>
+            <p class="item-excerpt">Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread. Biscuit
+              cotton candy toffee fruitcake danish marzipan powder gingerbread.Biscuit cotton candy toffee fruitcake
+              danish marzipan powder gingerbread.</p>
+          </div>
+          <div class="home-use-wrap">
+            <p class="item-excerpt">Biscuit cotton candy toffee fruitcake danish marzipan powder gingerbread. Biscuit
+              cotton candy toffee fruitcake danish marzipan powder gingerbread.Biscuit cotton candy toffee fruitcake
+              danish marzipan powder gingerbread.</p>
+          </div>
         </div>
-        <div class="scattered-wrap"><img src="assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png" loading="lazy"
-            sizes="(max-width: 767px) 125.82785034179688px, 16vw"
-            srcset="assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 500w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 800w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 1080w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 1600w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 2000w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 2831w"
-            alt="" class="scattered-image is-1"><img src="assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png"
-            loading="lazy" sizes="(max-width: 767px) 128.48175048828125px, 17vw"
-            srcset="assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 500w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 800w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 1080w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 1600w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 2000w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 2831w"
-            alt="" class="scattered-image is-2"><img src="assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png"
-            loading="lazy" sizes="(max-width: 479px) 128.48175048828125px, (max-width: 767px) 27vw, 17vw"
-            srcset="assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 500w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 800w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 1080w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 1600w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 2000w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 2831w"
-            alt="" class="scattered-image is-3"><img src="assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png"
-            loading="lazy" sizes="(max-width: 991px) 136.2054443359375px, 18vw"
-            srcset="assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 500w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 800w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 1080w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 1600w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 2000w, assets/cutunseen-histories-MfkVwVm1K0w-unsplash-(1).png 2831w"
-            alt="" class="scattered-image is-4">
-        </div>  
       </div>
-
-    
+      <div class="item-wrap">
+        {% assign article_files = site.notes | where_exp: "note", "note.path contains '/articles/'" %}
+        {% for article in article_files %}
+          <div class="item-contain">
+            {% if article.tags %}
+              <div class="item-tag-wrap">
+                {% for tag in article.tags %}
+                  <a href="#" class="item-tag">{{ tag }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+            
+            <div class="item-content">
+              <div class="title-wrap">
+                <h1 class="item-title">
+                  <a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a>
+                </h1>
+              </div>
+              <p class="item-excerpt">{{ article.excerpt | strip_html | truncatewords: 30 }}</p>
+            </div>
+          </div>
+        {% endfor %}
+       </div>
     </main>
-
+    <div class="footer">
+      {% include footer.html %}
+    </div>
   </div>
 
 
-  <footer>{% include footer.html %}</footer>
 
 
 </body>
 
 <style>
+  .content {
+    height: 100vh;
+  }
+
+
+  body {
+    padding: 0px;
+  }
+
+
+  @media screen and (max-width: 767px) {
     .content {
-        height: 100vh;
+      height: auto;
+      width: auto;
     }
 
-
-    body {
-        padding: 0px;
+    .content-body {
+      width: 100%;
     }
-
-
-    @media screen and (max-width: 767px) {
-      .content {
-        height: auto;
-        width: auto;
-      }
-
-      .content-body {
-        width: 100%;
-      }
-    }
+  }
 </style>
 
 </html>

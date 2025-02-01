@@ -86,11 +86,8 @@ body {
 }
 
 .page_main {
-  grid-column-gap: 2em;
-  grid-row-gap: 2em;
-  flex-flow: wrap;
-  height: auto;
-  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .page_wrap {
@@ -422,16 +419,16 @@ z-index: 5;
 }
 
 .content {
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  width: 70%;
-  padding-left: 9rem;
-  display: flex;
-  position: relative;
-  z-index: 2;
 
-}
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-left: 3em;
+    padding-right: 3em;
+    display: flex;
+  }
+
+
 
 .content-body {
   z-index: 3;
@@ -559,180 +556,72 @@ border-top: 1px solid #ccc;
 border-bottom: 1px solid #ccc;
 }
 
-@media screen and (max-width: 991px) {
-
-
- h1 {
-    font-size: 3rem;
-  }
-
-
-
-
-  .content {
-    padding-left: 5rem;
-  }
-
-  .logo-wrap {
-    padding: 1.9rem;
-  }
-
-  .content-body {
-    width: 80%;
-    padding: 4rem;
-  }
-
-  .scattered-image {
-    max-width: 7rem;
-
-  }
-
-  .scattered-image.is-1 {
-    top: 6%;
-    inset: -5% 0% auto -35%;
-  }
-
-  .scattered-image.is-2 {
-    top: 6%;
-  }
-
-  .scattered-image.is-3 {
-    top: 67%;
-
-  }
-
-  .scattered-image.is-4 {
-
-    inset: auto 0% -2em -17%;
-  }
-
-  .heading {
-    font-size: 1rem;
-  }
-
-  .about-content-wrap {
-    width: 80%;
-  }
+.nav-link-contain {
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
+  padding: .95em;
+  display: flex;
 }
 
-@media screen and (max-width: 767px) {
-  body {
-    --_responsive---padding-vertical: 7rem;
-    --_responsive---padding-horizontal: 3rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-
-  .page_main {
-    grid-column-gap: 2em;
-    grid-row-gap: 2em;
-    flex-flow: column;
-    height: auto;
-  }
-
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: static;
-    border: 0px;
-  }
-
-  .content {
-    grid-column-gap: 2em;
-    grid-row-gap: 2em;
-    flex-flow: column;
-    width: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .content-body {
-    padding: 0px;
-    justify-content: flex-start;
-  }
-
-  .logo-wrap {
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-
-  .logo-link.w--current {
-    margin-bottom: 0;
-  }
-
-  .indicator {
-    display: none;
-  }
-
-  .topic-list {
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .topic, .content-body {
-    width: auto;
-  }
-
-  .scattered-wrap {
-    grid-column-gap: 2em;
-    grid-row-gap: 2em;
-    display: flex;
-    position: static;
-  }
-
-  .scattered-image.is-1, .scattered-image.is-2, .scattered-image.is-3, .scattered-image.is-4 {
-    position: static;
-  }
-
-  .button-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    column-gap: 1em;
-  }
-
-  .topic-ul {
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    column-gap: 1em;
-
-    ul {
-      padding-inline-start: 0px !important;
-    }
-  }
-
-
+.nav-link-wrap {
+  grid-column-gap: 2.75em;
+  grid-row-gap: 2.75em;
+  display: flex;
 }
 
-@media screen and (max-width: 479px) {
-  .page_main {
-    flex-flow: column;
-  }
-
-
-  .content {
-    width: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .logo-wrap {
-    flex-flow: column;
-  }
+.item-title {
+  margin-top: 0;
 }
 
+.item-excerpt {
+  flex: 1;
+}
+
+.item-tag-wrap {
+  width: 50%;
+  margin-bottom: 2em;
+}
+
+.item-tag {
+  background-color: var(--swatch--primary);
+  color: var(--swatch--white);
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 4px 7px;
+  display: inline-block;
+}
+
+.item-content {
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+}
+
+.title-wrap {
+  flex: 1;
+  height: 100%;
+}
+
+.home_wrap {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8rem;
+  display: flex;
+}
+
+.home-title-wrap {
+  width: 40%;
+}
+
+.home-use-wrap {
+  align-self: flex-end;
+  width: 30%;
+}
+
+.item-contain {
+  border-bottom: 1px solid #000;
+  padding-bottom: 3.5rem;
+  padding-left: 3rem;
+  padding-right: 3em;
+}
 

@@ -21,7 +21,7 @@ header_excerpt: Ongoing thoughts, unfinished essays, and exploratory notes.
    <div class="item-content">
      <div class="title-wrap">
        <h1 class="item-title">
-         <a href="{{ site.baseurl }}{{ thread.url }}">{{ thread.title }}</a>
+         <a href="{{ site.baseurl }}{{ thread.url }}" class="internal-link">{{ thread.title }}</a>
        </h1>
      </div>
      <p class="item-excerpt">{{ thread.excerpt | strip_html | truncatewords: 30 }}</p>

@@ -7,6 +7,12 @@
     <main id="main" class="page_main">
   <nav>{% include nav.html %}</nav>
 
+  <div class="home_wrap">
+    <div class="home-title-wrap">
+      <h1>{{ page.header_title | default: page.title }}</h1>
+      <p class="item-excerpt">{{ page.header_excerpt }}</p>
+    </div>
+  </div>
   <content>
     {{ content }}
   

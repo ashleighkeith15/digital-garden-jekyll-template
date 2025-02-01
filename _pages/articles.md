@@ -2,6 +2,9 @@
 layout: page
 title: articles
 permalink: /articles
+header_title: Writing & Essays
+header_excerpt: A collection of finished pieces on various topics, from philosophy to technology.
+---
 ---
 
 <div class="item-wrap">
